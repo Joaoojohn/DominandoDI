@@ -23,7 +23,6 @@ namespace DependencyStore.Controllers
         public async Task<IActionResult> Place(string customerId, string zipCode, string promoCode)
         {
             var customer = await _customerRepository.GetByIdAsync(customerId);
-
             if (customer is null)
                 return NotFound();
 
